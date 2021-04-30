@@ -1,0 +1,15 @@
+# This set-up makes is supposed to immitate salt. That is, PTRACER(:,:,:,1) 
+# should look exactly like S(:,:,:).
+ &PTRACERS_PARM01
+ PTRACERS_numInUse=2,
+ PTRACERS_Iter0 = 31121053, 
+ PTRACERS_advScheme(1)=77,
+# PTRACERS_diffKh=1.E3,
+ PTRACERS_initialFile(1) ='init_dic.bin',
+ PTRACERS_advScheme(2)=77,
+# PTRACERS_diffKh=1.E3,
+ PTRACERS_initialFile(2) ='init_dic.bin',
+# PTRACERS_advScheme(3)=77,
+# PTRACERS_diffKh=1.E3,
+# PTRACERS_initialFile(3) ='hydrogThetaFile8.bin',
+ &

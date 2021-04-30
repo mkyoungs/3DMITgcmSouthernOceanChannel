@@ -1,0 +1,93 @@
+# ====================
+# | Model parameters |
+# ====================
+
+# Continuous equation parameters
+ &PARM01
+ vectorInvariantMomentum=.TRUE.,
+ viscAr=1.0000e-04,
+ viscAh=1.2000e+01,
+ viscA4Grid=1.0000e-01,
+# viscA4GridMax=5.0000e-01,
+# viscAhGridMax=1.0000e+00,
+ tempAdvScheme=80,
+ diffKrNrT=0.01, 0.01, 0.00997529849466522, 
+  0.00832186366748791, 0.000275703965832890, 
+  1.04535247083374e-05, 26*1.e-05,
+ diffKrNrS=0.01, 0.01, 0.00997529849466522, 
+  0.00832186366748791, 0.000275703965832890, 
+  1.04535247083374e-05, 26*1.e-05,
+ saltStepping=.FALSE.,
+ staggerTimeStep=.TRUE.,
+ eosType='LINEAR',
+ tAlpha=2.0000e-04,
+ sBeta=0.0000e+00,
+ no_slip_sides=.FALSE.,
+ no_slip_bottom=.FALSE.,
+ bottomDragLinear=1.1000e-03,
+ f0=-1.0000e-04,
+ beta=1.0000e-11,
+ rhoConst=1.0000e+03,
+ rhoNil=1.0e+03,
+ implicitDiffusion=.TRUE.,
+ implicitViscosity=.TRUE.,
+ exactConserv=.TRUE.,
+ hFacMin=1.0000e-01,
+ readBinaryPrec=64,
+ useSingleCpuIO=.TRUE.,
+ useJamartWetPoints=.TRUE.,
+# useJamartMomAdv=.TRUE.,
+ hFacMinDr=5.0304e+01,
+ tRef=32*0.0000e+00,
+ sRef=32*3.5000e+01,
+ &
+
+# Elliptic solver parameters
+ &PARM02
+ useSRCGSolver=.TRUE.,
+ cg2dMaxIters=1000,
+ cg2dTargetResidual=1.0000e-09,
+ &
+
+# Time stepping parameters
+ &PARM03
+ nIter0=0043362000,
+# 10 years
+ nTimeSteps=1051202,
+# nTimeSteps=1508901,
+# nTimeSteps=377225,
+# nTimeSteps=754451,
+ abEps=1.0000e-01,
+ ChkptFreq=3.1536e+07,
+ pChkptFreq=1.5768e+08,
+ taveFreq=0.0000e+00,
+ dumpFreq=0.0000e+00,
+ monitorFreq=600000.,
+ dumpInitAndLast=.TRUE.,
+# pickupStrictlyMatch=.FALSE.,
+ deltaT=6.00e+02,
+ tauThetaClimRelax=2.592e+06,
+ &
+
+# Gridding parameters
+ &PARM04
+ usingCartesianGrid=.TRUE.,
+# usingSphericalPolarGrid=.FALSE.,
+ delX=400*1.0e+04, 
+ delY=204*1.0e+04,
+ delR=10., 10., 10., 12., 14., 18., 
+ 23., 27., 31., 38., 45., 53., 60., 
+ 68., 76., 86., 96., 102., 124., 135.,
+ 152., 180., 200., 220., 250., 7*280.,
+ &
+
+# Input datasets
+ &PARM05
+ bathyFile='bathyFile1000.bin',
+ zonalWindFile='zonalWindFile015.bin',
+ hydrogThetaFile='hydrogThetaFile8Noise.bin',
+# uVelInitFile='uVelInitFile.bin',
+# surfQfile='Qfile.bin',
+ thetaClimFile='trelax1000.bin', 
+ &
+

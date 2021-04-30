@@ -1,0 +1,32 @@
+# ==========================
+# | DIAGNOSTICS parameters |
+# ==========================
+
+# Diagnostics package choices
+ &DIAGNOSTICS_LIST
+ diag_mnc=.FALSE.,
+ fields(1:11,1)='THETA','VVELMASS','UVEL','VVEL','UVELSQ','VVELSQ','VVELTH','UV_VEL_Z','WVEL','WVELTH','gT_Forc',
+ fileName(1)='DIAG',
+ frequency(1)=1.5768e+08,
+# frequency(1)=3.154e+07,
+ fields(1:6,2)='LaVH1TH','LaHs1TH','LaVa1TH','LaUH1TH','LaHw1TH','LaUa1TH',
+ fileName(2)='DIAGLayer', 
+ frequency(2)=1.5768e+08,
+# frequency(2)=3.154e+07,
+ fields(1:2,3)='TRELAX','oceTAUX',
+ fileName(3)='DIAGSurf',
+ frequency(3)=1.5768e+08,
+# frequency(3)=3.154e+07,
+# fields(1:12,4)='TRAC01','ForcTr01','VTRAC01','WTRAC01','TRAC02','ForcTr02','VTRAC02','WTRAC02',
+# fileName(4)='DIAGTracer',
+# frequency(4)=1.5768e+08,
+# frequency(4)=3.154e+07,
+ fileName(4)='DIAGInstant',
+ frequency(4)=-1.5768e+08,
+ fields(1,4)='THETA',
+ &
+
+# Statistics package choices
+ &DIAG_STATIS_PARMS
+ &
+
